@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Repairbot</title>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Repairbot</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <%= yield %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>
