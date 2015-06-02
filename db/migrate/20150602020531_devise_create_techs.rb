@@ -1,6 +1,6 @@
-class DeviseCreateTeches < ActiveRecord::Migration
+class DeviseCreateTechs < ActiveRecord::Migration
   def change
-    create_table(:teches) do |t|
+    create_table(:techs) do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -34,9 +34,9 @@ class DeviseCreateTeches < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :teches, :email,                unique: true
-    add_index :teches, :reset_password_token, unique: true
-    # add_index :teches, :confirmation_token,   unique: true
-    # add_index :teches, :unlock_token,         unique: true
+    add_index :techs, :email,                unique: true
+    add_index :techs, :reset_password_token, unique: true
+    # add_index :techs, :confirmation_token,   unique: true
+    # add_index :techs, :unlock_token,         unique: true
   end
 end
