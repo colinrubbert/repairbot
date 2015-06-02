@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,7 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">RepairBot</a>
+      <div class="logo-section">
+<!--        <img class="img-responsive" alt="RepairBot" src="assets/robot_32.png"> -->
+        <%= image_tag 'robot_64.png', :class => 'pull-left logo' %>
+        <%= link_to "RepairBot", root_path, :class => "navbar-brand" %>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
