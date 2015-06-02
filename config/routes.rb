@@ -1,5 +1,6 @@
 Repairbot::Application.routes.draw do
 
-  root 'techs#index'
+  devise_for :teches
+  root 'customers#index'
 
 end
