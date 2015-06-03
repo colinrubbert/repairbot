@@ -4,4 +4,7 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def new
+  end
+
 end

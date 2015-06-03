@@ -1,8 +1,9 @@
 Repairbot::Application.routes.draw do
 
-  devise_for :techs 
+  root 'customers#landing'
+  devise_for :techs
   resources :customers
-  root 'customers#index'
+
 
 
 

@@ -1,5 +1,18 @@
-<div class='col-xs-10 col-xs-offset-1'>
-  <h1>Welcome to RepairBot!</h1>
-  <h2><i>The easiest way to keep track of your clients device repairs.</i></h2>
-  <%= image_tag 'tech_comp.jpg', :class => 'img-responsive' %>
+<br />
+<br />
+<br />
+<div class="col-xs-10 col-xs-offset-1">
+  <% @customers.each do |customer| %>
+    <div class="col-xs-12">
+      <h1>Name: <%= customer.cname %></h1>
+      <h3>Company: <%= customer.ccompany %></h3>
+      <h3>Primary Phone: <%= customer.cpphone %></h3>
+      <h3>Secondary Phone: <%= customer.csphone %></h3>
+      <h3>Address: <%= customer.csaddr %></h3>
+      <h3>City: <%= customer.ccity %></h3>
+      <h3>Zipcode: <%= customer.czip %></h3>
+      <h3>Email: <%= customer.cemail %></h3>
+    </div>
+
+  <% end %>
 </div>
