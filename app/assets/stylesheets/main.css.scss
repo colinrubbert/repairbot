@@ -22,6 +22,7 @@ body {
 
 .navbar-right {
   margin-top: 25px;
+  margin-right: 20px;
   font-size: 1.4em;
 }
 
@@ -30,12 +31,23 @@ body {
   margin-top: 30px;
 }
 
+.navbar-collapse {
+  background: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    box-shadow: 0px 1px 15px #ccc;
+  }
+}
+
 .logo {
   max-height: 50px;
 }
 
 .logo-section {
   margin-top: 25px;
+  margin-left: 20px;
 }
 
 
