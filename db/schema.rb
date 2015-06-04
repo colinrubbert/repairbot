@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603003831) do
+ActiveRecord::Schema.define(version: 20150604002808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20150603003831) do
     t.string   "cemail"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cstate"
   end
 
   create_table "techs", force: true do |t|

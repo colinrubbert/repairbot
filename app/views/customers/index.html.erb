@@ -1,17 +1,15 @@
-<br />
-<br />
-<br />
 <div class="col-xs-10 col-xs-offset-1">
   <% @customers.each do |customer| %>
     <div class="col-xs-12">
-      <h1>Name: <%= customer.cname %></h1>
-      <h3>Company: <%= customer.ccompany %></h3>
-      <h3>Primary Phone: <%= customer.cpphone %></h3>
-      <h3>Secondary Phone: <%= customer.csphone %></h3>
-      <h3>Address: <%= customer.csaddr %></h3>
-      <h3>City: <%= customer.ccity %></h3>
-      <h3>Zipcode: <%= customer.czip %></h3>
-      <h3>Email: <%= customer.cemail %></h3>
+      <h2>Name: <%= customer.cname %></h2>
+      <p>Company: <%= customer.ccompany %></p>
+      <p>Primary Phone: <%= customer.cpphone %></p>
+      <p>Secondary Phone: <%= customer.csphone %></p>
+      <p>Address: <%= customer.csaddr %></p>
+      <p>City: <%= customer.ccity %></p>
+      <p>State: <%= customer.cstate %></p>
+      <p>Zipcode: <%= customer.czip %></p>
+      <p>Email: <%= customer.cemail %></p>
     </div>
 
   <% end %>
