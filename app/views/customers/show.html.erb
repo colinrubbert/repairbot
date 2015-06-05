@@ -19,10 +19,11 @@
     <p>Email: <%= @customer.cemail %></p>
     <br />
     <% if @customer.tech.present? %>
-      <small><i>Checked-In By: <%= @customer.tech.fname %> <%= @customer.tech.lname %></i></small>
+      <small>Checked-In By: <i class="text-danger"><%= @customer.tech.fname %> <%= @customer.tech.lname %></i></small>
     <% end %>
   </div>
   <div class="pull-right">
-    <%= link_to 'Edit', edit_customer_path(@customer), :class => 'btn btn-danger' %>
+    <%= link_to 'Edit', edit_customer_path(@customer), :class => 'btn btn-primary' %>
+    <%= link_to 'Delete Customer', customer_path(@customer), :method => :delete, :data => {:confirm => 'Are you sure you want to delete the customer?'}, :class => 'btn btn-danger' %>
   </div>
 </div>

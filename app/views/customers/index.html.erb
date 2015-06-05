@@ -32,7 +32,7 @@
       <p>Email: <%= customer.cemail %></p>
       <br />
       <% if customer.tech.present? %>
-        <small><i>Checked-In By: <%= customer.tech.fname %> <%= customer.tech.lname %></i></small>
+        <small>Checked-In By: <i class="text-danger"><%= customer.tech.fname %> <%= customer.tech.lname %></i></small>
       <% end %>
     </div>
 
