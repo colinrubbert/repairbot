@@ -1,0 +1,21 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-12">
+    <h2><%= @customer.cname %></h2>
+    <% if @customer.ccompany.present? %>
+      <p>Company: <%= @customer.ccompany %></p>
+    <% end %>
+    <p>Primary Phone: <%= @customer.cpphone %></p>
+    <% if @customer.csphone.present? %>
+      <p>Secondary Phone: <%= @customer.csphone %></p>
+    <% end %>
+    <p>Address: <%= @customer.csaddr %></p>
+    <p>City: <%= @customer.ccity %></p>
+    <p>State: <%= @customer.cstate %></p>
+    <p>Zipcode: <%= @customer.czip %></p>
+    <p>Email: <%= @customer.cemail %></p>
+    <br />
+    <% if @customer.tech.present? %>
+      <small><i>Checked-In By: <%= @customer.tech.fname %> <%= @customer.tech.lname %></i></small>
+    <% end %>
+  </div>
+</div>
