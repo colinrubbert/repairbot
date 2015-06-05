@@ -19,6 +19,7 @@
     <div class="collapse navbar-collapse" id="repairbot-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if tech_signed_in? %>
+          <li><%= link_to "New Customer", new_customer_path %></li>
           <li><%= link_to 'Sign Out', destroy_tech_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to 'Log In', new_tech_session_path %></li>
