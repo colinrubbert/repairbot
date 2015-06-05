@@ -1,0 +1,26 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <h1>Edit Customer Information</h1>
+  <br />
+  <br />
+  <%= simple_form_for @customer do |f| %>
+    <%= f.input :cname, :placeholder => "Customer's Name", :label => false %>
+    <br/>
+    <%= f.input :ccompany, :placeholder => "Customer's Company", :label => false %>
+    <br />
+    <%= f.input :cpphone, :placeholder => "Customer's Primary Phone #", :label => false %>
+    <br />
+    <%= f.input :csphone, :placeholder => "Customer's Secondary Phone #", :label => false %>
+    <br />
+    <%= f.input :csaddr, :placeholder => "Customer's Address", :label => false %>
+    <br />
+    <%= f.input :ccity, :placeholder => "Customer's City", :label => false %>
+    <br />
+    <%= f.input :cstate, :placeholder => "Customer's State", :label => false %>
+    <br />
+    <%= f.input :czip, :placeholder => "Customer's Zip", :label => false %>
+    <br />
+    <%= f.input :cemail, :placeholder => "Customer's Email Address", :label => false %>
+    <br />
+    <%= f.submit 'Update', :class => 'btn btn-primary' %>
+  <% end %>
+</div>

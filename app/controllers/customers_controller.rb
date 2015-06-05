@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_tech!, :only => [:index, :new, :create]
+  before_action :authenticate_tech!, :only => [:index, :new, :create, :show]
 
   def index
     @customers = Customer.all
@@ -15,6 +15,10 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @customer = Customer.find(params[:id])
+  end
+
+  def edit
     @customer = Customer.find(params[:id])
   end
 
