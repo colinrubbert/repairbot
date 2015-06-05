@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  before_action :authenticate_tech!, :only => [:index, :new, :create]
 
   def index
     @customers = Customer.all
@@ -9,7 +10,7 @@ class CustomersController < ApplicationController
   end
 
   def create
-    Customer.create(customer_params)
+    current_tech.customers.create(customer_params)
     redirect_to customers_path
   end
 

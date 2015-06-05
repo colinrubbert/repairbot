@@ -26,6 +26,10 @@
       <p>State: <%= customer.cstate %></p>
       <p>Zipcode: <%= customer.czip %></p>
       <p>Email: <%= customer.cemail %></p>
+      <br />
+      <% if customer.tech.present? %>
+        <small><i>Checked-In By: <%= customer.tech.email %></i></small>
+      <% end %>
     </div>
 
   <% end %>
