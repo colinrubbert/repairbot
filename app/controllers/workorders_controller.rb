@@ -4,4 +4,8 @@ class WorkordersController < ApplicationController
     @workorders = Workorder.all
   end
 
+  def new
+    @workorder = Workorder.new
+  end
+
 end
