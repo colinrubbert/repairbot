@@ -1,1 +1,15 @@
-<h1>Welcome to Workorders Page</h1>
+<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-1">
+  <h1>Customer Workorders</h1>
+  <div class="col-xs-10 col-xs-offset-1">
+    <% @workorders.each do |workorder| %>
+      <div class="col-xs-12 col-md-4">
+        <h2>WOID: <%= workorder.woid %></h2>
+        <p><b>Device Make & Model:</b> <br /> <%= workorder.cdmake %> <%= workorder.cdmodel %></p>
+        <p><b>Device Accessories:</b> <br /><%= workorder.cdaccr %></p>
+        <p><b>Description of Problem:</b> <br /><%= workorder.cdesc %></p>
+        <p><b>Device Password:</b> <br /><%= workorder.cdpass %></p>
+        <p><b>Category:</b> <br /><%= workorder.ccat %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
