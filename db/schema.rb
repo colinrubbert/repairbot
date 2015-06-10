@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150605003917) do
+ActiveRecord::Schema.define(version: 20150610002756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,5 +54,17 @@ ActiveRecord::Schema.define(version: 20150605003917) do
 
   add_index "techs", ["email"], name: "index_techs_on_email", unique: true, using: :btree
   add_index "techs", ["reset_password_token"], name: "index_techs_on_reset_password_token", unique: true, using: :btree
+
+  create_table "workorders", force: true do |t|
+    t.integer  "woid"
+    t.string   "cdmake"
+    t.string   "cdmodel"
+    t.string   "cdaccr"
+    t.text     "cdesc"
+    t.text     "cdpass"
+    t.string   "ccat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
