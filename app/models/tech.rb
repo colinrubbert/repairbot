@@ -6,4 +6,5 @@ class Tech < ActiveRecord::Base
 
   has_many :workorders, through: :workorders, dependent: :destroy
   has_many :customers, dependent: :destroy
+  accepts_nested_attributes_for :workorders
 end
