@@ -1,0 +1,20 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <h1>Edit Workorder</h1>
+  <br />
+  <br />
+  <%= simple_form_for([@customer, @workorder]) do |f| %>
+    <%= f.input :cdmake, :placeholder => "Device Make", :label => false %>
+    <br />
+    <%= f.input :cdmodel, :placeholder => "Device Model", :label => false %>
+    <br />
+    <%= f.input :cdaccr, :placeholder => "Device Accessories", :label => false %>
+    <br />
+    <%= f.input :cdesc, :placeholder => "Description Of Problem / Performing Service Description", :label => false %>
+    <br />
+    <%= f.input :cdpass, :placeholder => "Device Password; Put 'N/A' if no password", :label => false %>
+    <br />
+    <%= f.input :ccat, :placeholder => "Service Category", :label => false %>
+    <br />
+    <%= f.submit 'Create', :class => 'btn btn-primary' %>
+  <% end %>
+</div>

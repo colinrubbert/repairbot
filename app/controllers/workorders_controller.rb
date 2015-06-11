@@ -14,6 +14,16 @@ class WorkordersController < ApplicationController
     redirect_to customer_workorders_path
   end
 
+  def show
+    @customer = Customer.find(params[:customer_id])
+    @workorder = Workorder.find(params[:id])
+  end
+
+  def edit
+    @customer = Customer.find(params[:customer_id])
+    @workorder = Workorder.find(params[:id])
+  end
+
   private
 
   def workorder_params
