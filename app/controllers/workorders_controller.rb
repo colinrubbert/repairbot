@@ -5,23 +5,32 @@ class WorkordersController < ApplicationController
   end
 
   def new
-    @customer = Customer.find(params[:customer_id])
     @workorder = Workorder.new
   end
 
   def create
-    Workorder.create(workorder_params)
-    redirect_to customer_workorders_path
+    @workorder = Workorder.create(workorder_params)
+    redirect_to workorders_path
   end
 
   def show
-    @customer = Customer.find(params[:customer_id])
     @workorder = Workorder.find(params[:id])
   end
 
   def edit
-    @customer = Customer.find(params[:customer_id])
     @workorder = Workorder.find(params[:id])
+  end
+
+  def update
+    @workorder = Workorder.find(params[:id])
+    @workorder.update_attributes(workorder_params)
+    redirect_to workorders_path
+  end
+
+  def destroy
+    @workorder = Workorder.find(params[:id])
+    @workorder.destroy
+    redirect_to workorders_path
   end
 
   private

@@ -1,5 +1,7 @@
 class Customer < ActiveRecord::Base
-  belongs_to :tech, dependent: :destroy
+  belongs_to :tech
   has_many :workorders
-  accepts_nested_attributes_for :workorders
+  has_many :techs, through: :workorders
+
+
 end

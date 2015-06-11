@@ -1,0 +1,25 @@
+<div class="col-xs-10 col-xs-offset-1">
+  <h1><u>Workorder Information</u></h1>
+</div>
+
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-12 col-md-4">
+    <h2>WOID: <%= @workorder.id %></h2>
+    <p><b>Device Make & Model:</b> <br /> <%= @workorder.cdmake %> <%= @workorder.cdmodel %></p>
+    <p><b>Device Accessories:</b> <br /><%= @workorder.cdaccr %></p>
+    <p><b>Description of Problem:</b> <br /><%= @workorder.cdesc %></p>
+    <p><b>Device Password:</b> <br /><%= @workorder.cdpass %></p>
+    <p><b>Category:</b> <br /><%= @workorder.ccat %></p>
+    <br />
+    <% if @workorder.customer.present? %>
+      <small>Customer: <i class="text-danger"><%= @workorder.customer.cname %></i></small>
+    <% end %>
+    <% if @workorder.tech.present? %>
+      <small>Checked-In By: <i class="text-danger"><%= @workorder.tech.fname %> <%= @workorder.tech.lname %></i></small>
+    <% end %>
+  </div>
+  <div class="pull-right">
+    <%= link_to 'Edit', edit_workorder_path(@workorder), :class => 'btn btn-primary' %>
+    <%= link_to 'Delete Workorder', workorder_path(@workorder), :method => :delete, :data => {:confirm => 'Are you sure you want to delete the workorder?'}, :class => 'btn btn-danger' %>
+  </div>
+</div>

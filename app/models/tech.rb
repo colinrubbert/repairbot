@@ -4,5 +4,6 @@ class Tech < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :customers
+  has_many :workorders, through: :workorders, dependent: :destroy
+  has_many :customers, dependent: :destroy
 end
