@@ -9,8 +9,8 @@ class WorkordersController < ApplicationController
   end
 
   def create
-    #current_user.workorders.build(workorder_params)
-    @workorder = Workorder.create(workorder_params)
+    current_tech.workorders.create(workorder_params)
+    #@workorder = Workorder.create(workorder_params)
     redirect_to workorders_path
   end
 
