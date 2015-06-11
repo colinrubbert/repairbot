@@ -1,3 +1,3 @@
 class Workorder < ActiveRecord::Base
-  belongs_to :customers
+  belongs_to :customer, dependent: :destroy
 end
