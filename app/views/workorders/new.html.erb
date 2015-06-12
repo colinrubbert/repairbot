@@ -14,6 +14,7 @@
     <%= f.input :cdpass, :placeholder => "Device Password; Put 'N/A' if no password", :label => false %>
     <br />
     <%= f.input :ccat, :placeholder => "Service Category", :label => false %>
+    <%= f.input :customer_id, as: :hidden, input_html: { value: params[:customer_id] } %>
     <br />
     <%= f.submit 'Create', :class => 'btn btn-primary' %>
   <% end %>

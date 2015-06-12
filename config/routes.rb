@@ -4,9 +4,6 @@ Repairbot::Application.routes.draw do
   devise_for :techs
   resources :customers
   resources :workorders
-  
-
-
 
 
 end

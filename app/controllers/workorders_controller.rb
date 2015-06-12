@@ -6,11 +6,11 @@ class WorkordersController < ApplicationController
 
   def new
     @workorder = Workorder.new
+    @customer = Customer.find(params[:customer_id])
   end
 
   def create
     current_tech.workorders.create(workorder_params)
-    #@workorder = Workorder.create(workorder_params)
     redirect_to workorders_path
   end
 
@@ -37,7 +37,7 @@ class WorkordersController < ApplicationController
   private
 
   def workorder_params
-    params.require(:workorder).permit(:cdmake, :cdmodel, :cdaccr, :cdesc, :cdpass, :ccat)
+    params.require(:workorder).permit(:cdmake, :cdmodel, :cdaccr, :cdesc, :cdpass, :ccat, :customer_id)
   end
 
 end

@@ -23,7 +23,7 @@
     <% end %>
   </div>
   <div class="pull-right">
-    <%= link_to 'Create New Workorder', new_workorder_path(@workorder), :class => 'btn btn-info' %>
+    <%= link_to 'Create New Workorder', new_workorder_path(:customer_id => @customer.id), :class => 'btn btn-info' %>
     <%= link_to 'Edit', edit_customer_path(@customer), :class => 'btn btn-primary' %>
     <%= link_to 'Delete Customer', customer_path(@customer), :method => :delete, :data => {:confirm => 'Are you sure you want to delete the customer?'}, :class => 'btn btn-danger' %>
   </div>
