@@ -2,6 +2,7 @@ class WorkordersController < ApplicationController
 
   def index
     @workorders = Workorder.all
+    @workorders = Workorder.search(params[:search])
   end
 
   def new

@@ -4,16 +4,16 @@
 
 <div class="col-xs-10 col-xs-offset-1">
   <div class="col-xs-12 col-md-4">
-    <h2>WOID: <%= @workorder.id %></h2>
+    <% if @workorder.customer.present? %>
+      <h2><i class="text-danger"><%= @workorder.customer.cname %></i></h2>
+    <% end %>
+    <h3>WOID: <%= @workorder.id %></h3>
     <p><b>Device Make & Model:</b> <br /> <%= @workorder.cdmake %> <%= @workorder.cdmodel %></p>
     <p><b>Device Accessories:</b> <br /><%= @workorder.cdaccr %></p>
     <p><b>Description of Problem:</b> <br /><%= @workorder.cdesc %></p>
     <p><b>Device Password:</b> <br /><%= @workorder.cdpass %></p>
     <p><b>Category:</b> <br /><%= @workorder.ccat %></p>
     <br />
-    <% if @workorder.customer.present? %>
-      <small>Customer: <i class="text-danger"><%= @workorder.customer.cname %></i></small>
-    <% end %>
     <% if @workorder.tech.present? %>
       <small>Checked-In By: <i class="text-danger"><%= @workorder.tech.fname %> <%= @workorder.tech.lname %></i></small>
     <% end %>
