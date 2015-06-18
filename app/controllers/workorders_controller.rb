@@ -1,4 +1,5 @@
 class WorkordersController < ApplicationController
+  before_action :authenticate_tech!, :only => [:index, :new, :create, :show, :update, :destroy]
 
   def index
     @workorders = Workorder.all

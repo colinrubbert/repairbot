@@ -5,7 +5,11 @@ class Customer < ActiveRecord::Base
   accepts_nested_attributes_for :workorders
 
   def self.search(search)
-    where("lower(cname) LIKE ?", "%#{search}%")
+    if search
+      where("lower(cname) LIKE ?", "%#{search.downcase}%")
+    else
+      find(:all)
+    end
   end
 
 end

@@ -3,6 +3,10 @@ class Workorder < ActiveRecord::Base
   belongs_to :customer
 
   def self.search(search)
-    where(:id => "#{search}")
+    if search
+      where(:id => "#{search}")
+    else
+      find(:all)
+    end
   end
 end
