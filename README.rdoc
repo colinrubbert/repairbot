@@ -6,4 +6,4 @@ Having a lack of software in the industry suited for doing device repairs, Repai
 
 The goal of RepairBot is to provide a solution for single person to medium sized businesses and everything in between that focus on tablet, cell phone, laptop, desktop, and other miscellaneous electronic device repairs. RepairBot is designed with functionality and simplicity in mind.
 
-RepairBot is a passion project created by Colin Rubbert and IT Systems Administrator and Full Stack Web Developer.
+RepairBot is a passion project created by Colin Rubbert an IT Systems Administrator and Full Stack Web Developer.
