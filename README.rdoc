@@ -1,28 +1,9 @@
-== README
+== RepairBot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The best way to keep track of your customer's device repairs.
 
-Things you may want to cover:
+Having a lack of software in the industry suited for doing device repairs, RepairBot was born.
 
-* Ruby version
+The goal of RepairBot is to provide a solution for single person to medium sized businesses and everything in between that focus on tablet, cell phone, laptop, desktop, and other miscellaneous electronic device repairs. RepairBot is designed with functionality and simplicity in mind.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+RepairBot is a passion project created by Colin Rubbert and IT Systems Administrator and Full Stack Web Developer.
