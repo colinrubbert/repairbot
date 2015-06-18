@@ -26,6 +26,7 @@
               <li><%= link_to "Customer List", customers_path %></li>
             </ul>
           </li>
+          <li><%= link_to "Work Orders", workorders_path %></li>
           <li><%= link_to 'Sign Out', destroy_tech_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to 'Log In', new_tech_session_path %></li>
