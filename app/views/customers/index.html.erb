@@ -14,6 +14,7 @@
 <div class="clear"></div>
 <hr />
 
+<% if @customers.present? %>
 <div class="col-xs-10 col-xs-offset-1">
   <% @customers.each do |customer| %>
     <div class="col-xs-12 col-md-4">
@@ -40,3 +41,8 @@
 
   <% end %>
 </div>
+<% else %>
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="alert alert-danger text-center">No customer by that name. Please create new customer.</div>
+</div>
+<% end %>
