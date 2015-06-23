@@ -1,1 +1,11 @@
+<div class="col-xs-10 col-xs-offset-1">
 <h1>Repairs Section</h1>
+  <% @repairs.each do |repair| %>
+    <h3><strong>Workorder ID: </strong><%= repair.workorder_id %></h3><br />
+    <p><strong>Scanner Results: </strong><%= repair.scanner %></p>
+    <p><strong>Tasks Performed: </strong><%= repair.task %></p>
+    <p><strong>Software Installed: </strong><%= repair.software %></p>
+    <p><strong>Notes for Customer: </strong><%= repair.customer_note %></p>
+    <p><strong>Technician Only Notes: </strong><%= repair.tech_note %></p>
+  <% end %>
+</div>
